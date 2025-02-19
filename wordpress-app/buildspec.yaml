@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    CDK_STACK_NAME: "CDKToolkit" # Replace with your stack name
+    CDK_STACK_NAME: "WordpressAppStack" # Replace with your stack name
     CDK_REGION: "ca-central-1" # AWS region name
     ACTION: "deploy" # Default action: 'deploy' or 'destroy'
 
