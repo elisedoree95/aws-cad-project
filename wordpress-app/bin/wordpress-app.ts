@@ -9,7 +9,7 @@ const app = new cdk.App();
 const vpcDeployment = true
 
 
-const deployment = {"stack" : "A"}
+const deployment = {"stack" : "V"}
 
 if(['A'].includes(deployment.stack)){
 

@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    CDK_STACK_NAME: "WordpressAppStack" # Replace with your stack name
+    CDK_STACK_NAME: "WordpressVpcStack" # Replace with your stack name
     CDK_REGION: "ca-central-1" # AWS region name
     ACTION: "deploy" # Default action: 'deploy' or 'destroy'
 
@@ -29,9 +29,9 @@ phases:
       - |
         if [ "$ACTION" == "deploy" ]; then
            - echo "Synthesizing CDK App..."
-           - cdk synth || exit 1  # Stops if synth fails
+           - cdk synth
            - echo "Deploying CDK Stack..."
-           - cdk deploy $CDK_STACK_NAME --require-approval never || exit 1
+           - cdk deploy $CDK_STACK_NAME --require-approval never
         elif [ "$ACTION" == "destroy" ]; then
           echo "Destroying CDK Stack..."
           cdk destroy $CDK_STACK_NAME --force
