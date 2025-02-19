@@ -25,13 +25,13 @@ phases:
   build:
     commands:
       - |
-        if [ "$ACTION" == "deploy" ]; then
+        if [ "$ACTION" == "apply" ]; then
           echo "Deploying CDK stack..."
-          cdk deploy --require-approval never 
+          cdk deploy --require-approval never || exit 1
 
         elif [ "$ACTION" == "destroy" ]; then
           echo "Destroying CDK stack..."
-          cdk destroy --force
+          cdk destroy --force || exit 1
 
         else
           echo "Invalid ACTION parameter. Use 'apply' or 'destroy'."
