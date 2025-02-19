@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    ACTION: "deploy" # Default action: 'deploy' or 'destroy'
+    ACTION: "apply" # Default action: 'deploy' or 'destroy'
 
 phases:
   install:
