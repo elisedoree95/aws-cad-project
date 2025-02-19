@@ -31,10 +31,10 @@ phases:
            - echo "Synthesizing CDK App..."
            - cdk synth
            - echo "Deploying CDK Stack..."
-           - cdk deploy $CDK_STACK_NAME --require-approval never
+           - cdk deploy --require-approval never
         elif [ "$ACTION" == "destroy" ]; then
           echo "Destroying CDK Stack..."
-          cdk destroy $CDK_STACK_NAME --force
+          cdk destroy --force
         else
           echo "Invalid ACTION parameter. Use 'deploy' or 'destroy'."
           exit 1
