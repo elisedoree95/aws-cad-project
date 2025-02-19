@@ -23,8 +23,6 @@ phases:
     commands:
       - echo "Configuring AWS CLI..."
       - aws sts get-caller-identity
-      - echo "Bootstrapping CDK if required..."
-      - cdk bootstrap aws://$(aws sts get-caller-identity --query Account --output text)/$CDK_REGION
 
   build:
     commands:
