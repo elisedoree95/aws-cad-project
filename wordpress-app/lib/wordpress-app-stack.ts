@@ -76,7 +76,7 @@ export class WordpressAppStack extends cdk.Stack {
       versionDescription: "v1",
       launchTemplateData: {
         instanceType: 't2.micro',
-        imageId: "ami-0d1e3f2707b2b8925",
+        imageId: "ami-053a45fff0a704a47",
         userData: cdk.Fn.base64(EC2UserData),
         securityGroupIds: [cdk.Fn.importValue("Application-EC2-SG-ID")],
       },
